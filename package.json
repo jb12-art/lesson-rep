@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "hello": "echo Hello world"
+    "hello": "echo Hello world",
+    "prepare": "husky install",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,25 @@
     "react": "^19.2.0"
   },
   "devDependencies": {
-    "eslint": "^9.39.1"
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jb12-art/lesson-rep.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jb12-art/lesson-rep/issues"
+  },
+  "homepage": "https://github.com/jb12-art/lesson-rep#readme",
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{js,css,md}": "prettier --write"
   }
 }
