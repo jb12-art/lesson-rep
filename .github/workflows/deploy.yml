@@ -43,6 +43,9 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Print secret
+        run: echo "Secret is ${{ secrets.DEPLOY_TOKEN }}"
+
 secret:
   -name: Use secret in script
-  run: echo "Using secret ${{ secrets.MY_SECRET_TOKEN }}"
+run: echo "Using secret ${{ secrets.MY_SECRET_TOKEN }}"
